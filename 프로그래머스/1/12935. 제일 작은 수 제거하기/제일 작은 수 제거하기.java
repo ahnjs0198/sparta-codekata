@@ -1,5 +1,9 @@
 class Solution {
     public int[] solution(int[] arr) {
+        if(arr.length == 1){
+          int[] answer = {-1};
+          return answer;
+        }
         int[] answer = new int[arr.length-1];
         int min = arr[0];
         int index = 0;
@@ -17,11 +21,6 @@ class Solution {
                 j++;
             }
         }
-        if (arr.length==1){
-            int [] a = {-1};
-            return a;
-        } else {
-            return answer;
-        }
+        return answer;
     }
 }
