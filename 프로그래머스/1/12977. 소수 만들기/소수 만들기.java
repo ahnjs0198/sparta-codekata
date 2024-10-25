@@ -8,12 +8,7 @@ class Solution {
                 for(int k=0; k<j; k++){
                     boolean flag = true;
                     sum = nums[i]+nums[j]+nums[k];
-                    for(int s=2; s<sum; s++){
-                        if(sum%s==0){
-                            flag = false;
-                        }
-                    }
-                    if(flag){
+                    if(isPrime(sum)){
                         answer++;
                     }
                 }
@@ -21,5 +16,14 @@ class Solution {
         }
 
         return answer;
+    }
+    public boolean isPrime (int sum){
+        boolean flag = true;
+        for(int s=2; s<sum; s++){
+            if(sum%s==0){
+                flag = false;
+            }
+        }
+        return flag;
     }
 }
